@@ -4,7 +4,7 @@ Simple node module to generate secure hash tokens containing user data. Useful i
 
 ## Generate token
 
-Generate will create a new ticket, default is 1 hour expire time.
+Generate will create a new token, default is 1 hour expire time.
 
 	var hashAuthToken = require('hash-auth-token')('super-secret-random-string');
 
@@ -12,8 +12,8 @@ Generate will create a new ticket, default is 1 hour expire time.
 
 ## Verify token
 
-Verify will return the user object, or throw error if signature does not match, or token is expired. 
+Verify token. Method will return the user object, or throw error if signature does not match, or token is expired. 
 
 	var hashAuthToken = require('hash-auth-token')('super-secret-random-string');
 
-	var token = hashAuthToken.verify('Some token');
+	var userObj = hashAuthToken.verify('Some token');

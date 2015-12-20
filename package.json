@@ -1,6 +1,6 @@
 {
   "name": "hash-auth-token",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Generate authorization token using hash of data, expiry and some shared secret.",
   "main": "index.js",
   "scripts": {

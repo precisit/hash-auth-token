@@ -1,0 +1,25 @@
+{
+  "name": "hash-auth-token",
+  "version": "0.0.4",
+  "description": "Generate authorization token using hash of data, expiry and some shared secret.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hash",
+    "auth",
+    "token",
+    "generator",
+    "authorization",
+    "header",
+    "http",
+    "server",
+    "client"
+  ],
+  "author": "Magnus Lundstedt",
+  "license": "MIT",
+  "dependencies": {
+    "assert-plus": "^0.2.0"
+  }
+}

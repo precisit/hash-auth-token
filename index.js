@@ -19,10 +19,10 @@ hashAuthToken.prototype.verify = function(token) {
 	assert.string(token, 'token');
 	var parts = token.split(':');
 
-	var userObjJSON = new Buffer(parts[0], 'base64').toString('ascii');
-	var signature = parts[1];
+	var userObjJSON = (new Buffer(parts[0], 'base64'));
 	var checkSignature = crypto.createHmac('sha256', this.sharedSecret).update(userObjJSON).digest('base64');
 
+	var signature = parts[1];
 	if(signature == checkSignature) {
 		var userObj = JSON.parse(userObjJSON);
 		if(Date.now() < userObj.validTo) {
